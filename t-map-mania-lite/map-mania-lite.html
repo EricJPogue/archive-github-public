@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<!--
+    Author:  Eric Pogue
+    Class:   Web & Distributed Programming 
+    Project: Map Mania Lite v1.5
+    Session: su18-cpsc-24700-lt1
+    Description: This application is intended to be a starting point for Map Mania.
+-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Map Mania Lite</title>
+        <script src="map-mania-lite.js"></script>
+        <link rel="stylesheet" href="map-mania-lite.css"> 
+    </head>
+    <body onload="initApplication()">
+        <h1>Renata &amp; Eric's &quot;Top Ten&quot; Favorite Places to Visit Game</h1>        
+        Hint: <input id="hint-id" type="text" value="" size="120" disabled><br><br>
+        Score: <input id="score-id" type="text" value="" size="2" disabled><br><br>
+
+        <div id="myMapID"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzBv2wzvSaRv0jO2dLYTi2xKlqctFIuKs&callback=initMap"
+            async defer>
+        </script>
+    </body>
+</html>
