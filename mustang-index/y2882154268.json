@@ -1,0 +1,15 @@
+{
+    "firstName": "Mickey",
+    "lastName": "Mouse",
+    "preferredName": "Mouse, Mickey",
+    "email": "mickeymouse@disney.com",
+    "phoneNumber": "800-255-5010",
+    "city": "Orlando",
+    "state": "FL",
+    "zip": "32830",
+    "lat": "28.39",
+    "lng": "-81.53",
+    "favoriteHobby": "Looking for Minnie Mouse",
+    "favoriteSport": "Catching Minnie Mouse",
+    "favoritHobbyWhy": "Fun for Sure"
+  }
