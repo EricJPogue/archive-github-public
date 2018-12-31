@@ -1,0 +1,20 @@
+<!-- welcome.html.erb - initial view for the cars application
+    -->
+<!-- The initial information -->
+<p>
+ <!-- <h1> Aidan's Used Car Lot </h1>
+  <h2> Welcome to our home document </h2> -->
+  We currently have <%= @num_cars %> used Corvettes listed <br />
+  To request information on available cars, please fill out <br />
+  the following form and submit it 
+</p>
+<!-- The form to collect input from the user about their interests  
+    -->
+<form action = "result"  method = "post" >
+  From year: <input type = "text"  size = "4"  name = "year1" /> 
+  To year: <input type = "text"  size = "4"  name = "year2" /> 
+  Body style: <input type = "text"  size = "12"  name = "body" />
+  <br />
+  <input  type = "submit"  value = "Submit request" /> <br />
+  <input type = "reset"  value = "Reset form" /> <br />
+    </form>

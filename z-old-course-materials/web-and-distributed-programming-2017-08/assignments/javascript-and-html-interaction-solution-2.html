@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>CS247 - Lab #4</title>
+	    <meta charset = "utf-8" />
+		<script type="text/javaScript">
+		<!--
+			function init() {
+				imageArray = new Array();
+				currentImage = 0;
+			}
+			
+			function addImage() {
+				var imageURL = document.getElementById("imageURL").value;
+				if (imageURL.search(/^http.*(jpg|gif)$/)!=0) {
+					alert("Wrong URL");
+				} else {
+					imageArray.push(imageURL);
+				}
+			}
+			
+			function nextImage() {
+				var img = document.getElementById("theImage");
+				currentImage = (currentImage + 1) % imageArray.length;
+				img.src = imageArray[currentImage];
+			}
+		//-->
+		</script>
+	</head>
+	
+	<body onload="init()">
+		<h1>Lab #4</h1>
+		<img src="" alt="" id="theImage" width="400px" height="300px" />
+		<form action="" />
+			<label>Source URL<input type="text" id="imageURL"/></label>
+			<input type="button" id="addButton" value="Add image" onclick="addImage()"/>
+			<input type="button" id="nextImageButton" value="Next image" onclick="nextImage()" />
+			
+		</form>
+
+	</body>
+	
+
+
+</html>
+
+
+
+
+
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>JavaScript Basics Solution</title>
+	    <meta charset = "utf-8" />
+		<script type="text/javaScript">
+		<!--
+		/* Ex. 1
+		var a = 3;
+		var b = 4;
+		var c = "cat";
+		
+		document.write(a+b);
+		document.write(a+c);
+		*/
+		
+		/* Ex. 2
+		var num1 = prompt("Enter the first number", "");
+		var num2 = prompt("Enter the second number", "");
+		var num3 = prompt("Enter the third number", "");
+
+		var maxNum = Math.max(num1, num2, num3);
+		
+		alert("The max number is "+maxNum);
+		*/
+
+		/* Ex. 3
+		for (var i=2; i<=18; i++) {
+			if (i%2==0) {
+				document.write(i+" is EVEN<br />");
+			} else {
+				document.write(i+" is ODD<br />");
+			}
+		}
+		*/
+		
+		/* Ex. 4
+		person = new Object();
+		person.firstName = "John";
+		person.lastName = "Smith";
+		person.eyeColor = "Blue";
+		person.age = 27;
+		
+		for (var prop in person) {
+			document.write(prop + " = " + person[prop] + "<br />");
+		}
+		*/
+		
+		/* Ex. 5
+		var names = new Array();
+		for (var i=0; i<5; i++) {
+			names.push(prompt("Enter name "+i,""));
+		}
+		
+		names.sort();
+		for (var i=0; i<names.length; i++) {
+			document.write(names[i]+"<br />");
+		}
+		*/
+		
+		/* Ex. 6
+		function sumArray(a) {
+			var sum = 0;
+			for (var i=0; i<a.length; i++) {
+				sum = sum + a[i];
+			}
+			return sum;
+		}
+		
+		var myArray = [17, 21, 4, 3, 7];
+		document.write("The sum of "+myArray+" is "+sumArray(myArray)+"<br />");
+		*/
+		
+		/*
+		*/
+		var addr = prompt("Enter you address","");
+		var pos = addr.search(/^\d+ [SNEW]\.? \w[a-zA-Z .]*$/);
+		if (pos==0) {
+			alert("OK");
+		} else {
+			alert("Incorrect address format");
+		}
+		
+		//-->
+		</script>
+	</head>
+	
+	<body>
+	</body>
+	
+
+
+</html>

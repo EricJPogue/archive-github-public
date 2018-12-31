@@ -1,0 +1,24 @@
+<!-- result.html.erb - the result of the user request for
+                       information about cars  
+     -->
+    <p>
+<!-- Display what the user asked for -->
+      Cars from <%= @year1 %> to <%= @year2 %>
+       with the <%= @body %> body style 
+    </p>
+<!-- Display the results of the request in a table -->
+    <table border = "border">
+      <tr>
+        <th> Body Style </th>
+        <th> Miles </th>
+        <th> Year </th>
+      </tr>
+<!-- Put the cars in @selected_cars in the table -->
+      <% @selected_cars.each do |car| %>
+        <tr>
+          <td> <%= car.body_style %> </td>
+          <td> <%= car.miles %> </td>
+          <td> <%= car.year %> </td>
+        </tr>
+      <% end %> <!-- end of do loop -->
+    </table>

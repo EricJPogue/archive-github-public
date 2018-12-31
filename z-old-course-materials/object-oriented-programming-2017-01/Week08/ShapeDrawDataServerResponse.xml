@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<shapeslistwithcolor>
+  <shape>
+    <type>rectangle</type>
+    <x>5</x>
+    <y>10</y>
+    <width>11</width>
+    <height>20</height>
+    <color>blue</color>
+  </shape>
+  <shape>
+    <type>oval</type>
+    <x>25</x>
+    <y>50</y>
+    <width>22</width>
+    <height>22</height>
+    <color>red</color>
+  </shape>
+</shapeslistwithcolor>

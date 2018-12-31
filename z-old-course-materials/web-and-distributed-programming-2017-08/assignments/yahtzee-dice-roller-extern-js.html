@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Yahtzee Dice</title>
+        <style type="text/css">
+            input { text-align:right; }
+        </style>
+        <script src="yahtzee-dice-roller-extern-js.js"></script>
+    </head>
+    <body onload="random()">
+        <button type="button" autofocus onclick="random()">Roll Yahtzee Dice</button><br><br>
+        <table>
+            <tr>
+                <th>Dice</th>
+                <th>Values</th> 
+            </tr>
+            <tr>
+                <td>Dice 1:</td>
+                <td> 
+                    <input id="dice-1" type="text" value="" size="5" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>Dice 2:</td>
+                <td>
+                    <input id="dice-2" type="text" value="" size="5" disabled>
+                </td>
+                </tr>
+            <tr>
+                <td>Dice 3:</td>
+                <td>
+                    <input id="dice-3" type="text" value="" size="5" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>Dice 4:</td>
+                <td>
+                    <input id="dice-4" type="text" value="" size="5" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>Dice 5:</td>
+                <td>
+                    <input id="dice-5" type="text" value="" size="5" disabled>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

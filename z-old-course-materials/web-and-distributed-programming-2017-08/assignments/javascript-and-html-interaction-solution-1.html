@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>CS247 - Lab #4</title>
+	    <meta charset = "utf-8" />
+		<style type="text/css">
+		</style>
+		<script type="text/javaScript">
+		<!--
+			function init() {
+				imageArray = new Array();
+				currentImage = 0;
+				var imgURL = "https://www.lewisu.edu/welcome/offices/marketing/graphicsguide/img/charlie_b.gif";
+				imageArray.push(imgURL);
+				var theImage = document.getElementById("theImage");
+				theImage.src = imageArray[currentImage];
+			}
+			
+			function addImage() {
+				var imageURL = document.getElementById("imageURL").value;
+				if (imageURL.search(/^http.*(jpg|gif)$/) != 0) {
+					alert("Wrong URL for an image!");
+				}
+				imageArray.push(imageURL);
+			}
+			
+			function nextImage() {
+				currentImage = (currentImage + 1) % imageArray.length;
+				var theImage = document.getElementById("theImage");
+				theImage.src = imageArray[currentImage];
+			}
+		//-->
+		</script>
+	</head>
+	
+	<body onload="init()">
+		<h1> Lab #4 </h1>
+		<img src="" alt="" width="400px" height="300px" id="theImage"/>
+		<form action="">
+			<label>Source URL<input type="text" id="imageURL" /></label>
+			<input type="button" value="Add image" id="addButton" onclick="addImage()"/>
+			<input type="button" value="Next image" id="nextImageButton" onclick="nextImage()"/>
+		</form>
+	</body>
+	
+
+
+</html>

@@ -1,0 +1,4 @@
+/* mainstyles.css - a style sheet for the main controller */
+h1 {font-style: italic; color: blue;}
+h2 {color: blue;}
+.labels {font-style: italic; color: red;}

@@ -1,0 +1,20 @@
+<?xml version = "1.0"  encoding = "utf-8" ?>
+<!-- xslplane.xml -->
+<?xml-stylesheet type = "text/xsl" href = "xslplanes.xsl" ?>
+<planes>
+	<plane>
+	   <year> 1977 </year>
+	   <make> Cessna </make>
+	   <model> Skyhawk </model>
+	   <color> Light blue and white </color>
+	</plane>
+	<plane>
+	   <year> 1980 </year>
+	   <make> Cessna </make>
+	   <model> Skyhawk </model>
+	   <color> Light blue and white </color>
+	</plane>
+</planes>
+
+
+

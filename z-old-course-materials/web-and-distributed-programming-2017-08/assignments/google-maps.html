@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- Google Maps -->
+
+<html lang = "en">
+   	<head>
+		<title>Google Maps</title>
+        <meta charset = "utf-8" />
+        <link rel="stylesheet" type="text/css" href="assignment-styles.css">
+        <style type = "text/css">
+            pre {margin-top:0}                      
+            code {margin-top:0; margin-bottom:0}       
+        </style>  
+	</head>
+
+    <body class="bodyFont">
+        <h3>Google Maps</h3>
+
+        <h4>Overview</h4>
+        <p>We are going to utilize the Google Maps JavaScript API to create a game where the player needs to search 
+            Google Maps to find several of your favorite places.</p>
+        <p>The game works by displaying Google’s Maps interface on the page and allowing the user to pan and zoom in 
+            order to find one of several predefined locations. The goal of the game is, for a given location, to zoom 
+            in closely (to a predefined zoom level = 8) such that the location is within the bounds of the map. Once the 
+            player finds that location, his or her score will be increased by 1 and the location will be then changed to 
+            another from a predefined sequence.</p>
+        <p>You are free to select the particular locations and the sequence in which they must be found. To help the 
+            player find the right location, you should display a hint message if the location can be found on the 
+            currently shown portion of the map within the current zoom level. The hints should be more specific as the 
+            user zooms in. For example, for zoom level 2, you may display “You are getting there!”, for zoom level 3, 
+            you may display “You’re getting close”, for zoom level 4, you may display “You’re getting closer”, etc.</p> 
+
+        <h4>What You Need to Know</h4>
+        <p>For this assignment you will need to know: the basics of JavaScript including:</p>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Google Maps JavaScript API (see Getting Started with Google Maps JavaScript API section below)</li>
+        </ul> 
+
+        <h4>Getting Started with Google Maps JavaScript API</h4>
+        <p>The Google Maps JavaScript API is a broadly used and sophisticated Web API. It can be a little daunting at 
+            first. However, the following steps should get you started:
+        <ul>
+            <li>Start by completing the Google Maps JavaScript Getting Started tutorial 
+                <a href="https://developers.google.com/maps/documentation/javascript/tutorial" target="_blank">
+                [Link]</a></li>
+            <li>After you have your Google Maps API key and have successfully completed the tutorial try to understand 
+                how the Maps API works by looking at the API reference to see the possible properties, methods, and 
+                events you can use in your
+                program</li>
+            <li>Copy the "Hello World" example HTML file and make sure it runs locally... make sure to replace the 
+                "YOUR_API_KEY" with your actuall key</li>
+            <li>Once you have Hello World example working, review the JavaScript Event Listeners documentation
+                <a href="https://developers.google.com/maps/documentation/javascript/events" target="_blank">
+                [Link]</a> to understand how you will add event listenders to your map (you will need to add a 
+                "bounds_changed" event at a minimum)</li>
+            <li>Review the "Google Maps Garage: Where's My Map!" video 
+                <a href="https://www.youtube.com/watch?v=21PDd17dnnI&feature=youtu.be" target="_blank">
+                [Link]</a> if you are having difficulty with your map showing up in the browser
+            <li>Experiment with:
+            <ul>
+                <li>Creating a new location using the LatLng constructor similar to:<br>
+                    var loc1 = new LatLng(12.432, 43.234);</li>
+                <li>Checking if a location is within the bounds by using the map.getBounds().contains(loc) method, 
+                    where loc is the variable holding a LatLng object above</li>
+                <li>Getting the current zoom level using the map.getZoom() method</li>
+            </ul>
+            </li>
+            <li>Also note that are a number of very good Google Maps API tutorials available on YouTube including the 
+                one called "Google Maps JavaScript API Tutorial"
+                <a href="https://www.youtube.com/watch?v=Zxf1mnP5zcw&t=820s" target="_blank">
+                [Link]</a>
+        </ul> 
+
+        <h4>Requirements</h4>
+        <p>The web page should be hosted on your Azure website and contain the following:</p>
+        <ul>
+            <li>Header text (your names, project#, course name, semester) </li>
+            <li>Game title</li>
+            <li>The Google Maps interface</li>
+            <li>Text with the hints that guide the player</li>
+            <li>The score display</li>
+            <li>A separate "Getting Started" section that provides an overview and explains how to play from a user 
+                perspective</li>
+        </ul> 
+        <p><strong>Styling:</strong> All elements in the web page should be styled using CSS3. You will be graded based 
+            on the styling and ease of use. You should ask at least one other person to try the game without your 
+            input. Watch them and listen to their feedback.</p> 
+        <p><strong>Event Processing:</strong> When the page loads, initialize the zoom level to 1 and the center of the 
+            map to be (0.0, 0.0). Then initialize the current location to be the first in a list that you hard code 
+            into the script.</p> 
+        <p>If the center of the map changes, check if the current location is within the map bounds (using the 
+            map.getBounds() method) and update the hint text. Also, check for the scoring condition (within bounds and 
+            zoom level = 8). If the player scored (i.e. found the location), alert the user, update the score and choose 
+            the next location on the list. Check if the game is over. If it is over, redirect the browser’s window to a 
+            game over html page, which will display the text “Game Over. You Won!”</p>
+        <p>If the zoom level changes, do the same as above, but also make the hint text more specific as the zoom 
+            increases. You should have a different hint text for each zoom level from 1 to 8.</p>
+        <p>Note: both the change of the map center and a change in the zoom level will cause the bounds_changed event to 
+            occur. So you can just make your code respond to that one event by implementing the appropriate event 
+            handling function.</p>
+
+        <h4>Additional Requirements</h4>
+        <p>The following additional items should also be completed as part of the assignment:</p>
+        <ul>
+            <li>Separate your HTML, CSS, and JavaScript code into separate files and hosted on your Azure website</li>
+            <li>Include a block comment containing your name, course name, project number, and semester at the top of 
+                each file</li>
+            <li>Verify that your page should display correctly when using the Google Chrome browser</li>
+            <li>Validate your HTML5 file using the W3C validator service... Google search "HTML validator" or "CSS 
+                validator" if you are having difficulty finding the W3C validation service</li>
+            <li>Utilize proper programming style including the use of whitespace (line breaks and indents) to separate 
+                sections of your code</li>
+            <li>Your code should produce no errors or warning during validation/execution</li>
+            <li>Your code needs to follow proper programming style including use of whitespace (line breaks and indents) 
+                to separate sections of your code and comments to document the your</li>
+        </ul>   
+
+        <h4>What to Submit</h4>
+        <p>When submitting the project through Blackboard:</p>
+        <ul>
+            <li>Submit a single HTML file named "google-maps-project-xxx.html" where "xxx" are your initials in lower 
+                case</li>
+            <li>Include a block comment containing your name, course name, project number, and semester at the top of 
+                the file</li>
+            <li>Include a brief summary of your experience with the project (what you were able to accomplish and what 
+                you were not able to complete)</li>
+            <li>Include a direct link to your project and and additioanl link to your Azure landing page that links
+                to all of your projects and labs</li>
+            <li>Include a list of locations that represent the winning sequenceof locations, e.g.: “Chicago” “New York” 
+                “Barcelona”... test and make sure that it works 
+            <li>Optionally include any comments/suggestions on how this project could be improved</li> 
+        </ul>
+    </body>
+</html>
+
+
+
+
+

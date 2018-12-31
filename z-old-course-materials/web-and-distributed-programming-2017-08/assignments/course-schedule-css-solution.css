@@ -1,0 +1,30 @@
+.bigtitle {
+	font: bolder 400% serif;
+	letter-spacing: 5px;
+}
+
+.roundedbox {
+	border: 2px solid;
+    border-radius: 25px;
+	padding: 10px;
+}
+
+.slightleft {
+	position: relative;
+	left: 20%;
+}
+
+.nicebutton {
+	border: 2px solid;
+    border-radius: 100px;
+	color: #FF3333;
+	background-color: #FFAAAA;
+	height: 50px;
+	width: 50px;
+}
+
+.blowup:hover {
+	border: 2px solid;
+    transform:scale(1.5,1.5);
+	
+}

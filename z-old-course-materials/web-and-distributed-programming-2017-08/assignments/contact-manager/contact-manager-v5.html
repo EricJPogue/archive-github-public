@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Contact Manager</title>
+        <link rel="stylesheet" type="text/css" href="contact-manager-v5.css">
+        <script src="contact-manager-v5.js"></script>
+    </head>
+    <body onload="viewCurrentContact()">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td> 
+                    <input id="name" type="text" value="" size="20">
+                </td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td>
+                    <input id="address" type="text" value="" size="20">
+                </td>
+            </tr>
+            <tr>
+                <td>City:</td>
+                <td>
+                    <input id="city" type="text" value="" size="20">
+                </td>
+            </tr>
+            <tr>
+                <td>State:</td>
+                <td>
+                    <input id="state" type="text" value="" size="20" onkeypress="myFunction()">
+                </td>
+            </tr>
+            <tr>
+                <td>Zip</td>
+                <td>
+                    <input id="zip" type="text" value="" size="20" onfocus="zipFocusFunction()" onblur="zipBlurFunction()">
+                </td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="previous()"><-</button></td>
+                <td><button type="button" autofocus onclick="next()">-></button>
+                </td>
+            <tr>
+                <td><button type="button" onclick="add()">New</button></td>
+                <td><button type="button" onclick="remove()">Delete</button>
+            </td>
+            </tr>
+        </table>
+    </body>
+</html>

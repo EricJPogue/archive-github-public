@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>JavaScript and HTML Interaction</title>
+        <meta charset = "utf-8" />
+        <link rel="stylesheet" type="text/css" href="assignment-styles.css">
+        <style type = "text/css">
+            p {margin-top:10px; margin-bottom: 0;}
+            ul {margin-top: 0;}
+            ol {margin-top: 0;}
+
+            pre {margin-top:0}                      /* needs work */
+            code {margin-top:0; margin-bottom:0}    /* needs work */    
+        </style>  
+	</head>
+	
+	<body class="bodyFont" >
+        <h3>JavaScript and HTML Interaction</h3>
+        <h4>Requirements</h4>
+        <p>For this assignment you will need to:</p>
+        <ol>
+            <li>Create an HTML page with the following elements:</li>
+            <ul>
+                <li>Image with a fixed width and height (e.g. 400 x 300) with id="theImage"</li>
+                <li>Form with a textbox with id="imageURL" (labeled "Source URL"), and two plain buttons: one with value="Add image" and id="addButton", and another with value="Next image" and id="nextImageButton"</li>
+            </ul>
+            <li>Add an event handler for the onload event that:</li>
+            <ul>
+                <li>Creates an empty array called imageArray</li>
+                <li>Creates a variable called currentImage and initializes it to 0</li>
+                <li>NOTE: Define the variables implicitly (do not use var) so they can be accessible in other functions.</li>
+            </ul>
+            <li>Add an event handler for the click event on the addButton. It should take the text that is in the 
+                imageURL textbox, check if it forms a valid URL for an image (just check if it begins in http and ends 
+                in jpg or gif), and append it to the imageArray. If it's not valid, display an appropriate alert.</li>
+            <li>Add an event handler for the click event on the nextImageButton. Have it set the src property of 
+                theImage to the next image URL in the imageArray, that is, the image at index currentImage. Cycle if 
+                currentImage goes over bounds of array.</li> 
+        </ol>
+        <h4>Additional Requirements</h4>
+        <p>The following items should be part of nearly every assignment. It is best to get in the practice.
+        <ul>
+            <li>Verify that your page should display correctly when using the Google Chrome browser</li>
+            <li>Validate your HTML5 file using the W3C validator service</li>
+            <li>Utilize proper programming style including the use of whitespace (line breaks and indents) to separate sections of your code</li>
+            <li>Include comment at the top of your HTML file containing your name, course name, semester, and "Week X Lab" where "X" is the current week</li>
+        </ul>         
+        <h4>What you Need to Know</h4>
+        <p>For this assignment you will need to know the basics of JavaScript including:</p>
+        <ul>
+            <li>event handlers</li>
+            <li>document object model</li>
+            <li>arrays</li>
+            <li>functions</li>
+            <li>pattern matching</li> 
+        </ul> 
+	</body>
+</html>
+
+

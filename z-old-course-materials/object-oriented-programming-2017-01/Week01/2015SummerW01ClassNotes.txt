@@ -1,0 +1,444 @@
+Object-oriented programming:
+	style of developing software that focuses on nouns / actors
+	not on verbs / actions
+	
+	"organization chart" approach - the pieces I need to do the work
+	and how those pieces are related to each other.
+	
+	More extensible / scalable solution.
+	
+Object-oriented programming is rich in theory.
+* concepts: features
+		encapsulation - information hiding
+		abstraction
+		inheritance
+		composition
+		aggregation
+		polymorphism
+* patterns: templates that we can follow to build productive relationships among
+the pieces that implement our software
+	singleton
+	factory
+	delegation
+	model-view-controller
+* principles - guidelines for identifying the pieces you need to implement your
+software. They help you divide up the work.
+	Open-Closed Principle
+	Dependency-Inversion Principle
+	Interface Segregation Principle
+	Liskov Substitution Principle
+	Single Responsibility Principle
+	
+"Pieces" == "Classes"
+OO Programming focuses on identifying, designing, and coding your classes.
+
+A class is a blueprint that specifies the design of a particular thing that is
+going to be part of your software.
+
+A class is a data type. But it's not just a data container. It also has skills - 
+things it can do with the data.
+
+Class = data + functions for working with that data
+
+int num;
+num = 7;
+
+Once you have a class defined, you can declare variables whose type is that class.
+Such variables are called objects.
+
+Class - data type
+Object - the variable you declare of that class type
+
+Student stu;   // stu will be an object of the Student class
+
+To bring an object into existence, you have to use the new keyword in conjunction
+with the class's constructor.
+
+Student stu = new Student();
+
+A constructor is a special function that allocates memory and assigns values to 
+all the variables that make up the object.
+
+public class Student {
+	private String lastName;
+	private String firstName;
+	public Student() {
+		lastName = "";
+		firstName = "";
+	}
+	public Student(String fn, String ln) {
+		lastName = ln;
+		firstName = fn;
+	}
+}
+
+Student stu = new Student("Ray","Klump");
+
+As an OO developer:
+1. Define the class definitions
+	* use concepts (inheritance, aggregation ...)
+	* use patterns (define relationships)
+	* use principles (which classes do I need?)
+2. Declare whatever objects from those classes that you need to actually do the work
+3. Have those objects interact with each other. (calling each other's functions)
+
+Concepts:
+Abstraction
+Encapsulation
+Info hiding
+Aggregation & Composition
+Inheritance
+Polymorphism
+
+Encapsulation is what makes a class a class.
+  --> data and methods / functions all lumped together in one data type
+  usually, data is declared private. Access to it is controlled through public functions
+  
+  information hiding - making data private so that you can control access to it.
+  
+public class Student {
+	private String studentID;
+	private String address;
+	private String firstName;
+	private String lastName;
+	public String getID() {
+		return studentID;
+	}	
+	public void setID(String str) {
+		if (str doesn't consist of 9 digits) {
+			don't set the studentId
+			issue a warning;
+		} else {
+			studentID = str;
+		}
+	}
+}
+
+Student favorite = new Student();
+favorite.setID("867530900");
+
+Inheritance
+	a class can inherit data and methods from its ancestor class
+	ancestor - superclass
+	descendant - subclass
+	
+In Java:
+
+class Shape {
+	private int x;
+	private int y;
+}
+class Circle extends Shape {
+	private int radius;
+}
+class Rectangle extends Shape {
+
+}
+class Face extends Rectangle {
+	
+}
+
+Abstraction:
+the process of identifying the most generic version of a family of things.
+the thing from which all others in the family descend.
+Purposefully vague
+
+Announcing that certainly functionality and characteristics will exist, and the 
+descendants will be more specific on how those functions will work and what these characteristic mean
+
+An abstract class is one from which you can't build an object. It exists just to define what the subclasses in the family are going to be able to do and to know.
+
+An abstract class is one that has one or more abstract functions.
+An abstract function is one that has no implementation.
+
+abstract class Shape {
+	public abstract double area();
+	public void doSomething {
+		// do stuff;
+	}
+}
+
+An interface is class-like thing that has in it only abstract functions.
+interface Drawable {
+	public abstract void doSomething();
+	public abstract void doSomethingElse();
+	public abstract void doSomethingConcrete();
+}
+
+YOu can descend from only one other class.
+But you can implement as many interfaces as you want.
+	Implementing an interface = providing a body for each of its abstract functions.
+	
+Interfaces prescribe behaviors - things that the implementers can do.
+
+You can't declare objects that are of an abstract class type or of an interface.
+You can declare objects only from data types that have all the functions already fully declared.
+
+
+Shape shp = new Shape();  <-- illegal
+
+Circle cir = new Circle();
+
+Polymorphism - provides a convenient way for processing a collection of related things.
+That collection of related things = things that are part of the same inheritance tree.
+
+When a subtype inherits from a supertype, it inherits the supertype's functions. But,
+the subtype can embellish those functions - override them.
+
+Shape - superclass
+	abstract function called area()
+Circle, Rectangle, Triangle - subclasses of Shape
+	each will have their own area() function
+	
+Shape[] shapes = new Shape[3];
+shapes[0] = new Circle();
+shapes[1] = new Rectangle();
+shapes[2] = new Triangle();
+for (Shape s : shapes) {
+	System.out.println(s.area());	
+}
+
+Virtual Method Table (VMT) - the instructions for each subclass's shared functions are
+stored in this VMT.
+
+
+Ownership - that a data member of one class can be an object of another.
+
+class Face {
+	private Nose n;
+	private Mouth m;
+	private Eye le;
+	private Eye re;
+}
+
+class Dashboard {
+	private Radio rad;
+	private SteeringWheel wheel;
+}
+
+2 kinds of ownership
+* Composition - exclusive ownership
+	the things that are owned can't have a life independent of the owner.
+	the owner is responsible for creating the objects it owns
+* Aggregation - shared ownership
+	the things that are owned did exist before the owner.
+	the owned things are passed into the owner, and created somewhere else.
+	
+class Face {
+	private Nose n;
+	private Mouth m;
+	private Eye le;
+	private Eye re;
+	public Face() {
+		n = new Nose();   // composition
+		m = new Mouth();
+		le = new Eye();
+		re = new Eye();
+	}
+}
+
+class Face {
+	private Nose n;
+	private Mouth m;
+	private Eye le;
+	private Eye re;
+	public Face(Nose ext_n, Mouth ext_m, Eye ext_le, Eye ext_re) {
+		n = ext_n;			// aggregation
+		m = ext_m   
+		le = ext_le;
+		re = ext_re;
+	}
+}
+
+Nose n = new Nose();
+Mouth m = new Mouth();
+Eye le = new Eye();
+Eye re = new Eye();
+
+Face f = new Face(n,m,le,re);   // aggregation
+
+UML - Unified Modeling Language - set of symbols and drawings for clarifying the relationships among classes in an OO program.
+
+There are many types of UML diagrams. We focus on class diagrams.
+A class diagram identifies the classes that comprise an OO app and how they are related.
+
+singleton is a pattern that ensures that just one object of a particular class ever exists.
+
+thread - a channel of execution.
+multi-threaded applications can do multiple things at a time.
+
+singletons coordinate the activities taking place on simultaneous threads.
+
+often use a private constructor along with a static function.
+
+A static function is one that doesn't belong to any one object; rather, it belongs to 
+the class as a whole. - can be called directly from the name of the class.
+
+Factory pattern enables us to build related things in a very consistent way.
+
+Delegation - an owner who has been asked to do a particular function tells one of the objects it owns to do that thing on its behalf. In many cases, the name of the function in the owner and the owned is the same (but not always).
+
+Model-View-Controller - keeping data separate from its presentation and user interaction.
+Model - classes that actually store the data
+View - this is the user sees and interacts with the data (form, file, database - an external presentation or representation of the data)
+Controller - negotiates the interactions between the model and the view (intermediary)
+
+Software is often of bad quality.
+Rigidity: it's hard to make changes
+Fragilty: when you make a change, you break things.
+Immobility: it's difficulty to repurpose your code for other applications.
+
+Object-oriented principles - guidelines on how to create good class systems.
+Open-Closed Principle (OCP)
+Dependency-Inversion Principle (DIP)
+Interface Segregation Principle (ISP)
+Single Responsibility Principle (SRP)
+Liskov Substitution Principle (LSP)
+
+OCP - software should be open to extension and closed to modification.
+* minimize changes to code you've already written.
+* extend it to new situations without changing underlying code you've already written.
+
+Key: inheritance and polymorphism.
+
+DIP - anti-micromanagement principle
+
+Interface Segregation Principle: no fat interfaces.
+Interfaces should be single-faced.
+Separate distinct behaviors among multiple interfaces.
+
+Single Responsibility Principle (SRP) - a class or interface should have only one reason to change.
+
+Example: VideoPlayer should not directly manage the network feed and the video playback.
+
+class VideoPlayer {
+	private NetworkManager netman;
+	private PlayerManager playman;
+}
+
+Liskov Substitution Principle
+
+class Rectangle extends Shape {
+	private int width;
+	private int height;
+	public setWidth(int w) {
+		width = w;
+	}
+	public setHeight(int h) {
+		height = h;
+	}
+}
+class Square extends Rectangle {
+	public setWidth(int w) {
+		width = w;
+		height = w;
+	}
+	public setHeight(int h) {
+		height = h;
+		width = h;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
