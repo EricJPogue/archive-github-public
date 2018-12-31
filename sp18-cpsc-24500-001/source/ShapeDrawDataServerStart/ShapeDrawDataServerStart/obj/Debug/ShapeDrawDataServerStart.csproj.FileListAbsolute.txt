@@ -1,0 +1,5 @@
+D:\LewisU\CPSC-24500\Week08\ShapeDrawDataServerStart\ShapeDrawDataServerStart\bin\Debug\ShapeDrawDataServerStart.exe.config
+D:\LewisU\CPSC-24500\Week08\ShapeDrawDataServerStart\ShapeDrawDataServerStart\bin\Debug\ShapeDrawDataServerStart.exe
+D:\LewisU\CPSC-24500\Week08\ShapeDrawDataServerStart\ShapeDrawDataServerStart\bin\Debug\ShapeDrawDataServerStart.pdb
+D:\LewisU\CPSC-24500\Week08\ShapeDrawDataServerStart\ShapeDrawDataServerStart\obj\Debug\ShapeDrawDataServerStart.exe
+D:\LewisU\CPSC-24500\Week08\ShapeDrawDataServerStart\ShapeDrawDataServerStart\obj\Debug\ShapeDrawDataServerStart.pdb

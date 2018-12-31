@@ -1,0 +1,6 @@
+D:\LewisU\CPSC-24500\Week08\ShapeDrawDataClient\ShapeDrawDataClient\bin\Debug\ShapeDrawDataClient.exe.config
+D:\LewisU\CPSC-24500\Week08\ShapeDrawDataClient\ShapeDrawDataClient\bin\Debug\ShapeDrawDataClient.exe
+D:\LewisU\CPSC-24500\Week08\ShapeDrawDataClient\ShapeDrawDataClient\bin\Debug\ShapeDrawDataClient.pdb
+D:\LewisU\CPSC-24500\Week08\ShapeDrawDataClient\ShapeDrawDataClient\obj\Debug\ShapeDrawDataClient.csprojResolveAssemblyReference.cache
+D:\LewisU\CPSC-24500\Week08\ShapeDrawDataClient\ShapeDrawDataClient\obj\Debug\ShapeDrawDataClient.exe
+D:\LewisU\CPSC-24500\Week08\ShapeDrawDataClient\ShapeDrawDataClient\obj\Debug\ShapeDrawDataClient.pdb

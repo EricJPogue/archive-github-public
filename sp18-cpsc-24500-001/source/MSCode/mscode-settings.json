@@ -1,0 +1,26 @@
+{
+    "editor.renderWhitespace": "none",
+    "editor.fontSize": 14,
+    "html.autoClosingTags": false,
+    "html.format.enable": false,
+    "editor.suggestOnTriggerCharacters": false,
+    "editor.autoIndent": false,
+    "editor.autoClosingBrackets": false,
+    "editor.parameterHints": false,
+    "editor.quickSuggestions": {
+        "other": false,
+        "comments": false,
+        "strings": false
+      },
+    "editor.minimap.enabled": false,
+    "editor.detectIndentation": false,
+    "window.zoomLevel": 1,
+    "workbench.sideBar.location": "left",
+    "workbench.statusBar.visible": true,
+    "workbench.activityBar.visible": false,
+    "window.menuBarVisibility": "default",
+    "files.autoSave": "onFocusChange",
+    "editor.lineNumbers": "off",
+    "editor.codeLens": false,
+    "typescript.check.npmIsInstalled": false
+}

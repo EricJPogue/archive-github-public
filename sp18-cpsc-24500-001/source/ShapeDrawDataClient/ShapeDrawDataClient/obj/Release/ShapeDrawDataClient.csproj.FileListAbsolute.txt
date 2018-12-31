@@ -1,0 +1,5 @@
+D:\LewisU\CPSC-24500\Week08\ShapeDrawDataClient\ShapeDrawDataClient\bin\Release\ShapeDrawDataClient.exe.config
+D:\LewisU\CPSC-24500\Week08\ShapeDrawDataClient\ShapeDrawDataClient\bin\Release\ShapeDrawDataClient.exe
+D:\LewisU\CPSC-24500\Week08\ShapeDrawDataClient\ShapeDrawDataClient\bin\Release\ShapeDrawDataClient.pdb
+D:\LewisU\CPSC-24500\Week08\ShapeDrawDataClient\ShapeDrawDataClient\obj\Release\ShapeDrawDataClient.exe
+D:\LewisU\CPSC-24500\Week08\ShapeDrawDataClient\ShapeDrawDataClient\obj\Release\ShapeDrawDataClient.pdb
