@@ -1,0 +1,4 @@
+D:\LewisU\CPSC-24500\Week07\InternetShapeDrawLite\InternetShapeDrawLite\obj\Debug\InternetShapeDrawLite.csprojResolveAssemblyReference.cache
+D:\LewisU\CPSC-24500\Week07\InternetShapeDrawLite\InternetShapeDrawLite\obj\Debug\InternetShapeDrawLite.EJPShape.resources
+D:\LewisU\CPSC-24500\Week07\InternetShapeDrawLite\InternetShapeDrawLite\obj\Debug\InternetShapeDrawLite.Properties.Resources.resources
+D:\LewisU\CPSC-24500\Week07\InternetShapeDrawLite\InternetShapeDrawLite\obj\Debug\InternetShapeDrawLite.csproj.GenerateResource.Cache

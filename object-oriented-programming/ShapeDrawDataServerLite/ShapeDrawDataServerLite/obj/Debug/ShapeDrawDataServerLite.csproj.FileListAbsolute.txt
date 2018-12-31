@@ -1,0 +1,6 @@
+D:\LewisU\CPSC-24500\Week08\ShapeDrawDataServerLite\ShapeDrawDataServerLite\bin\Debug\ShapeDrawDataServerLite.exe.config
+D:\LewisU\CPSC-24500\Week08\ShapeDrawDataServerLite\ShapeDrawDataServerLite\bin\Debug\ShapeDrawDataServerLite.exe
+D:\LewisU\CPSC-24500\Week08\ShapeDrawDataServerLite\ShapeDrawDataServerLite\bin\Debug\ShapeDrawDataServerLite.pdb
+D:\LewisU\CPSC-24500\Week08\ShapeDrawDataServerLite\ShapeDrawDataServerLite\obj\Debug\ShapeDrawDataServerLite.exe
+D:\LewisU\CPSC-24500\Week08\ShapeDrawDataServerLite\ShapeDrawDataServerLite\obj\Debug\ShapeDrawDataServerLite.pdb
+D:\LewisU\CPSC-24500\Week08\ShapeDrawDataServerLite\ShapeDrawDataServerLite\obj\Debug\ShapeDrawDataServerLite.csprojResolveAssemblyReference.cache
